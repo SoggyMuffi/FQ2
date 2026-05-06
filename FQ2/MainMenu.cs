@@ -18,9 +18,9 @@ namespace FQ2
                 Utilities.PrintColored(line, ConsoleColor.DarkRed);
             }
 
-            Boolean KeepRunning = true;
+            bool KeepRunning = true;
             while (KeepRunning) {
-                string playerInput = Console.ReadLine() ?? ("".ToLower());
+                string playerInput = (Console.ReadLine() ??"").ToLower();
                 switch (playerInput)
                 {
                     case "e":
@@ -31,7 +31,7 @@ namespace FQ2
                         break;
                     default:
                         Console.Clear();
-                        Menu();
+                    
                         Console.WriteLine("Invalid Input: Please type E or Q");
                         
 

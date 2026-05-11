@@ -6,7 +6,10 @@ namespace FQ2
 {
     internal class MainMenu
     {
-
+        /// <summary>
+        /// Reads and displays the title screen, then prompts the player to either
+        /// start the game or quit. Calls ScenePlayer when E is entered.
+        /// </summary>
         public static void Menu()
         {
             string titleFile = "Title.txt";
@@ -24,17 +27,17 @@ namespace FQ2
                 switch (playerInput)
                 {
                     case "e":
-                        Console.WriteLine("Work In Progress");
+                        KeepRunning = false;
+                        Console.Clear();
+                        IntroScenes.Sceneplayer();
                         break;
                     case "q":
                         Environment.Exit(0);
                         break;
                     default:
-                        Console.Clear();
+                        
                     
                         Console.WriteLine("Invalid Input: Please type E or Q");
-                        
-
                         break;
                 }
 

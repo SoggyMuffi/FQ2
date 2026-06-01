@@ -16,6 +16,7 @@ namespace FQ2
             Console.ForegroundColor =  color;
             Console.WriteLine(text);
             Console.ResetColor();
+            //
         }
 
     }

@@ -14,15 +14,11 @@ namespace FQ2
         {
             string[] FileNames = [ "Intro1.txt", ];
 
-            foreach (string introfile in FileNames)
+          foreach (string FileName in FileNames)
             {
-                string[] intro = File.ReadAllLines(introfile);
-
-               foreach (string line in intro)
-                {
-                    Console.WriteLine(line);
-                }
+                Utilities.PrintFile(FileName);
                 Console.ReadLine();
+                Console.Clear();
             }
         }
         

@@ -12,14 +12,7 @@ namespace FQ2
         /// </summary>
         public static void Menu()
         {
-            string titleFile = "Title.txt";
-            string[] title = File.ReadAllLines(titleFile);
-
-            
-            foreach (string line in title)
-            {
-                Utilities.PrintColored(line, ConsoleColor.DarkRed);
-            }
+            Utilities.PrintFile("Title.txt", ConsoleColor.DarkRed);
 
             bool KeepRunning = true;
             while (KeepRunning) {
